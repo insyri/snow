@@ -1,5 +1,5 @@
 def insert_at_index(string: str, index: int, insert: str) -> str:
-    if not (0 <= index < len(string) - 1):
+    if not (0 <= index <= len(string) - 1):
         raise IndexError()
 
     # https://www.digitalocean.com/community/tutorials/how-to-index-and-slice-strings-in-python-3

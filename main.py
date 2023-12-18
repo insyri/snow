@@ -1,5 +1,6 @@
 import os
 from time import sleep
+from random import randint
 
 from util import str_logic
 
@@ -18,12 +19,11 @@ if __name__ == '__main__':
     # note: `[[]] * rows` does address copies, so doing `[id(n) for n in index]`, all values would return the same
     # address. so stupid.
 
-    # sample snowflake
-    # TODO: Implement snow generation logic.
-    snowflake_data.append((3, rows - 2))
     os.system('clear')
-
     while True:  # Program loop on each frame
+
+        for _ in range(randint(0, int(columns / 4))):  # How many snowflakes should spawn
+            snowflake_data.append((randint(0, columns - 1), rows - 1))  # Position of snowflakes
 
         # `j` tracks how many removes we've done, so when we add, we'll subtract `i` by `j` to make sure we don't skip
         # values. when we remove an element, the entire list shifts to the left by 1, so we have to back pedal by 1
@@ -37,7 +37,7 @@ if __name__ == '__main__':
             x = snowflake[0]
 
             if y < 0:
-                del snowflake
+                del snowflake_data[i]
                 rm_counter += 1
                 continue
 
