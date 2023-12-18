@@ -1,16 +1,35 @@
 import os
+import sys
 from time import sleep
 from random import randint
 
 from util import str_logic
 
-columns = 20
-rows = 20
-SL = str_logic(columns)
-
 if __name__ == '__main__':
-    # TODO: Implement screen refresh mechanic with a finite state machine, account for FPS + screen size.
     snowflake_data: list[(int, int)] = []
+
+    columns = 20
+    rows = 10
+
+    # terminal size argument logic
+    # python main.py x y
+    if len(sys.argv) == 3:
+        if sys.argv[1].isnumeric() and sys.argv[2].isnumeric():
+            columns = int(sys.argv[1])
+            rows = int(sys.argv[2])
+        else:
+            print("Values are not numeric, please input positive integers.")
+            exit(1)
+    elif len(sys.argv) == 2:
+        print("You must use both input arguments if you choose to input dimensions.")
+        exit(1)
+    else:
+        try:
+            columns, rows = os.get_terminal_size()
+        except OSError:
+            pass
+
+    SL = str_logic(columns)
 
     # sorts snowflake positions. len(index) = y; each row is a list of x values held at index[y].
     # (x, y) -> (index[y][n], y), where n >= 0 and represents an iteration of the snowflakes at that row.
