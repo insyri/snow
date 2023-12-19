@@ -43,3 +43,5 @@ Be more than welcome to ask questions about using GitLab, Git, or the project in
 | Does It Work? | Fancy?        | SUPER FANCY?? | Almost Ready To Ship | Complete! |
 |---------------|---------------|---------------|----------------------|-----------|
 | YES!!         | Getting there |               |                      |           |
+
+![Example](./output.gif)
