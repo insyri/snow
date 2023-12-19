@@ -17,6 +17,7 @@ other videos.
 
 https://www.youtube.com/watch?v=ltLUadnCyi0
 
+> This project was led by Noah Mercedes.
 
 ## How to Contribute
 Contributing to open-source software is more than just code, improving the phrasing in documentation or updating old
@@ -37,11 +38,8 @@ on the main repository [here](https://gitlab.com/insyri/snow/-/merge_requests).
 
 Be more than welcome to ask questions about using GitLab, Git, or the project in general if you are lost!
 
-## Update Log
-Here, we will post summaries periodically to update the status of the project, including what we have done, who's done
-it, and how. You can also view the [commit log](https://gitlab.com/insyri/snow/-/commits/main) to see direct changes as
-soon as they surface. Indepth summaries will be kept in the [`/summaries`](./summaries) directory.
+## Project Status
 
-### December 5 + 7
-On our previous meeting, we discussed the intuition behind the snow program, where we implemented the functionality
-through explanation. The president has set up the repository and created the row and generation logic.
+| Does It Work? | Fancy?        | SUPER FANCY?? | Almost Ready To Ship | Complete! |
+|---------------|---------------|---------------|----------------------|-----------|
+| YES!!         | Getting there |               |                      |           |
